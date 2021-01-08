@@ -24,6 +24,8 @@ public class LoopPatterns {
         //for each looppu
 
         int []loopArray= {1,3,9,6};
+
+
          int []loopArray1= {1,3,9,6};
          for (int i : loopArray){
              System.out.println(i);
