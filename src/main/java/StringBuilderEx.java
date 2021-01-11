@@ -1,6 +1,3 @@
-
-import org.junit.Test;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
@@ -15,9 +12,9 @@ public class StringBuilderEx {
     assertThat(builder.capacity(), is(16));
     assertThat(builder2.capacity(), is(574));
 
-    System.out.println("Contents of StringBuilder :" + builder);
+    System.out.println("Contents of StringBuilder.StringBuilder :" + builder);
 
-    // to size StringBuilder's capacity after construction use ensureCapacity()
+    // to size StringBuilder.StringBuilder's capacity after construction use ensureCapacity()
     builder.ensureCapacity(600);
     //trimToSize()
     builder.trimToSize();
@@ -60,12 +57,6 @@ public class StringBuilderEx {
         //from a start index to the end of the string
         assertThat(builder.substring(3), is("3456"));
 
-
-
-
-
-
-
-
-
-}}
+        
+}
+}
