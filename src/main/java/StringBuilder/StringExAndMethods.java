@@ -1,3 +1,5 @@
+package StringBuilder;
+
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -6,19 +8,20 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class StringExAndMethods {
     public static void main(String[] args) {
 
-        String asString = "abcdefg";
-        asString.charAt(2); //prints the index letter that we specify
+//        String asString = "abcdefg";
+//        asString.charAt(2); //prints the index letter that we specify
         //System.out.println(asString.charAt(2));
         //System.out.println("\t, \b, \n, \r, \', \", \\ ");
-
 
         //ex1   //convert from int to Srting
         Integer integer = 1;
         integer.toString();
-        System.out.println(integer.toString());//1
+
+        System.out.println("To string "+ Integer.parseInt("2"));//1
         //print int
         System.out.println(integer);
-//ex 2
+        
+//ex 2 from int to Srting
         int value = 1234;
         String string = String.valueOf(value);
         System.out.println(string); // 1234
@@ -28,18 +31,20 @@ public class StringExAndMethods {
         Integer fromStrToint = Integer.parseInt(string1);
         System.out.println(fromStrToint);
 
+        //ex4//from Str to Int /float = valueOf()
 
-        //from Str to Int /float = valueOf()
-//ex4
         String inttoStr = String.valueOf(2);
+        inttoStr.toCharArray();
+        System.out.println("To char array " + inttoStr);
 
-        //ex5     //convert from Str to Array
+        //ex5 //convert from String to Array
         char arrayfromDtr[] = string1.toCharArray();
         System.out.println(arrayfromDtr);//123
 
         // ex6 from String to char array
         char[] cArray = {4, 9, 8};
        // assertThat("498".toCharArray(), is(cArray));
+        cArray.toString();
 
         System.out.println(string1.getBytes());
 

@@ -5,12 +5,15 @@ import org.junit.Test;
 public class ReverseStringEx {
 
     public static void main(String[]args){
+
         //with strings
         String palindrome = "I saw Todd";
-        //create int len to get length info
+
+        //create int len to get palind length info
         int len = palindrome.length();
-        //
+        //for for loop with i
         char [] tempCharArray = new char[len];
+       // for forloop with j
         char[]charArray = new char[len];
 
         //put original String into array of Chars
