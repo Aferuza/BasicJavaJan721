@@ -20,7 +20,9 @@ public class Student extends Person {
         this.studentID = studentID;
     }
 //over
+    @Override
     public void display(){
+        super.display();
         System.out.println("My id is " + getStudentID());
     }
 

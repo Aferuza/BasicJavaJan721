@@ -1,9 +1,9 @@
-package RandomMethods;
-import java.util.Random;
+package Math_RandomMethods;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 //trigonom, calculus
-public class RandomEx {
+
+public class MathClassEx {
     public static void main(String[]args){
         System.out.println(Math.class);// class java.lang.Math
         System.out.println(Math.E); // 2.718281828459045
@@ -20,7 +20,7 @@ public class RandomEx {
         System.out.println(Math.copySign(-7, 4)); // takes sighn of I s numb and puts it to II
         System.out.println(Math.cos(0.7)); // cubic
         System.out.println(Math.cosh(-0.2)); // cubic
-        System.out.println(Math.exp(1))); // cubic
+        System.out.println(Math.exp(1)); // cubic
         System.out.println(Math.expm1(3)); // cubic
         System.out.println(Math.floor(9.55)); // cubic
         System.out.println(Math.floorDiv(5,2)); // cubic
@@ -43,15 +43,16 @@ public class RandomEx {
         System.out.println(Math.signum(75)); //
         System.out.println(Math.signum(75)); //
         System.out.println(Math.sin(-75)); //
-        System.out.println(Math.sinh(2); //
-        System.out.println(Math.tanh(42); //
+        System.out.println(Math.sinh(2)); //
+        System.out.println(Math.tanh(42)); //
         System.out.println(Math.toDegrees(0.56)); //in radiance
         System.out.println(Math.toIntExact((long)4.7)); //
-        System.out.println(Math.toRadians(2); //
+        System.out.println(Math.toRadians(2)); //
         System.out.println(Math.ulp(7.5)); //
         System.out.println(Math.round(75)); //
 
-         }}
+         }
+}
 
 //        double rnd = Math.random();
 //        System.out.println(String.format("generate %f as random",rnd ));
