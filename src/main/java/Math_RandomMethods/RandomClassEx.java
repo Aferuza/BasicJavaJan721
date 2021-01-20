@@ -23,6 +23,7 @@ public class RandomClassEx {
         int n3 = random.nextInt(20 - 1) + 5;
         System.out.println("Numb is betw 5 and 20 is " + n3);
 
+
         //ex3//generate random number between 10 and 15 and iterate 10 iterations
         int n = 10;
         for (int counter = 1; counter <= 10; counter++) {
@@ -37,7 +38,6 @@ public class RandomClassEx {
         //create obj with constritor
         //get new var length:
         int length = 5;
-
         //create empty array of char which holds 5 values
         char[] arrayText = new char[length];
         //for loop add char to index - rand numb
@@ -47,19 +47,15 @@ public class RandomClassEx {
 
 
         //ex5//anoth way-
-        int length1 = rString.nextInt(15);/*   DK
-                                                    DKK
-                                                    DKKL
-                                                    DKKLK*/
-
+        int length1 = rString.nextInt(15);
         int rndindex = random.nextInt(strValues.length());
         char rChar = strValues.charAt(rndindex);
         for (int j = 0; j < rndindex; j++) {
-            System.out.println(rndindex);
+            System.out.println("New random " + rndindex);
         }
 
-        //ex6//crete another for loop to turn indexes into one string:
 
+        //ex6//crete another for loop to turn indexes into one string:
         for (int k = 0; k < arrayText.length; k++) {
             randString += arrayText[k];
 
@@ -71,6 +67,7 @@ public class RandomClassEx {
             char chArStr = stringArray.charAt(lenthS);
             System.out.println("Here are random letters "+ chArStr);
             System.out.println(randString);
+
         }
          //1000-9999- not beloow 1000
 //        int n4 = 1000 + random.nextInt(1000 - 1000);
@@ -78,6 +75,8 @@ public class RandomClassEx {
 
 //        int n5 = rndRange(1, 3);
 //        System.out.println(n5);
+
+
     }
 
 //    public static int rndRange(int start, int finish) {
