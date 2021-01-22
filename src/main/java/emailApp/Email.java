@@ -8,9 +8,9 @@ public class Email {
     private String departm;
     private String email;
     private String companySuffix = "aeycompany.com";
-    private int getMailBoxCapacity = 500;
-    private int defaultPasswordLength;
-    private int mailBoxCapacity;
+    private int getMailBoxCapacity;
+    private int defaultPasswordLength = 10;
+    private int mailBoxCapacity= 500;;
     private String alternateEmail;
 
 
@@ -29,7 +29,7 @@ public class Email {
         System.out.println("Your password is  " + this.password);
 
         //combine elements to generate email
-        email = firstName.toLowerCase() + lastName.toLowerCase() + "@" + departm + "." + companySuffix;
+        email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + departm + "." + companySuffix;
         System.out.println("Your email is : " + email);
     }
 
@@ -53,32 +53,53 @@ public class Email {
 
     //generate random password
     private String randomPassword(int length) {
+    //not hardcoded, can change lenth any time
         String passwordSet = "ABCDEGHIJKLMNOPQRSTXYZ#$%^&#@><?";
-        char[] password = new char[length];// not hardcoded, can change lenth any time
+        char[] password = new char[length];
         for (int i = 0; i < length; i++) {
             int rand = (int) (Math.random() * passwordSet.length());
             password[i] = passwordSet.charAt(rand);
             System.out.println(rand);
             System.out.println(passwordSet.charAt(rand));
+            //System.out.println(passwordSet.charAt(rand));
         }
         return new String(password);
     }
 
-    //set mailbox capacity
-    public void setGetMailBoxCapacity(int capacity) {
+       //set mailbox capacity
+    public void setMailBoxCapacity(int capacity) {
         this.mailBoxCapacity = capacity;
     }
 
     //set alternate email
-    public void setAlternateEmail() {
-        this.alternateEmail = alternateEmail;
+    public void setAlternateEmail(String altEmail) {
+        this.alternateEmail = altEmail;
 
     }
+//public methods that will access the property
+    //instead of accesing the properties directly, will access them via these public methods(encapsulation /data binding, hiding
 
     //change password
-    public void changePassword() {
-        this.password = password;
+    public void changePassword(String passwordParam) {
+        this.password = passwordParam;
+
     }
+
+    //get mailbox capacity
+    public  int getGetMailBoxCapacity(){ return mailBoxCapacity; }
+    //get
+    public String getAlternateEmail(){ return alternateEmail; }
+    public String getPassword(){return password;}
+
+//method which prints info
+
+    public String showInfo(){
+        return  "Dispay name: " + firstName + " " + lastName +
+                 "Company email: " + companySuffix +
+                "Email " + email +
+                "Mailbox Capacity: " + mailBoxCapacity + "mb";
+    }
+
 
 
 }
