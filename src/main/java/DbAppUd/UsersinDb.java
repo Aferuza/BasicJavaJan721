@@ -39,7 +39,7 @@ public class UsersinDb {
     //ev time we create new student-   will increment id by 1; thats the use of static, 2 stud will have id 1001, 2 - 1002, etc
     //grade level + static id
     // not int, buts tring
-    private void setStudentId() {
+    void setStudentId() {
         id5DigitN++;
         //cast stud as string
         this.studentId = studGradeYear + " " + id5DigitN;
