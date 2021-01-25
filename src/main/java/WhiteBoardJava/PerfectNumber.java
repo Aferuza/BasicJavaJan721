@@ -1,7 +1,4 @@
 package WhiteBoardJava;
-
-
-
 //6= 1+2+3=6
 //20=1+2+4+7+14=28
 public class PerfectNumber {

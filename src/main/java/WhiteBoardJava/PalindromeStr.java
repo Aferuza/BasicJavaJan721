@@ -1,8 +1,8 @@
 package WhiteBoardJava;
 
-public class Palindrome {
+public class PalindromeStr  {
     public static void main(String[]args){
-    String original = "abcd";
+    String original = "mama";
     //char b ='m';
     String reverse = " ";
     for(int i = original.length()-1; i>=0; i--){
