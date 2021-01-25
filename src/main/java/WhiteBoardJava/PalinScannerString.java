@@ -11,6 +11,7 @@ public class PalinScannerString {
         string = scn.nextLine();
         //invoke isPal method below
         isPal(string);
+
     }
     //
 
