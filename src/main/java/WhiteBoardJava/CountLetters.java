@@ -1,9 +1,6 @@
 package WhiteBoardJava;
 
-import org.junit.jupiter.api.DynamicTest;
 import org.testng.annotations.Test;
-
-import static java.util.stream.LongStream.iterate;
 
         //1. swap numbers
         //2. count letters in string
@@ -103,4 +100,4 @@ import static java.util.stream.LongStream.iterate;
 
     }
 
-}
+
