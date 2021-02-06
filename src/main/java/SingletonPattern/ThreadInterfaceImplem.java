@@ -10,7 +10,7 @@ public class ThreadInterfaceImplem {
         }
     }
 
-    public static void main(String[]args){
+    public static void main(String[] args){
 
         Thread myThread = new Thread(new MyRunnable() );
         myThread.start();
