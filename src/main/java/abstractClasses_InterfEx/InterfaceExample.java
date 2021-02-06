@@ -1,7 +1,5 @@
 
-package abstractClasses;
-
-import java.awt.*;
+package abstractClasses_InterfEx;
 
 interface WatterBottleInterface {
     String color ="Blue";
