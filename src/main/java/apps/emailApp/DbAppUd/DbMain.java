@@ -1,4 +1,4 @@
-package DbAppUd;
+package apps.emailApp.DbAppUd;
 
 import java.util.Scanner;
 
