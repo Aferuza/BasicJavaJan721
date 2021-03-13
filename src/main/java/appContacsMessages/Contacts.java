@@ -10,10 +10,8 @@ import java.util.ArrayList;
 
         // we are creating 2 constructors- becuz wn we create new contact it has no messages, for that we are creating anoth constructor which
         //will not accept an arraylist of different messages
-
         //Ist constructor for messages will be null
         public Contacts(String name, String number, String email, ArrayList <Message>message) {
-
             this.name = name;
             this.number = number;
             this.email = email;
@@ -21,7 +19,6 @@ import java.util.ArrayList;
         }
         //IInd constructor will save messages as arraylist
         public Contacts(String name, String number, String email) {
-
             this.name = name;
             this.number = number;
             this.email = email;

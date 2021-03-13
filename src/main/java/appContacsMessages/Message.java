@@ -12,7 +12,7 @@ public class Message {
     }
 
     public void getDetails() {
-        System.out.println("Cont Name: " + recipient + "\nMessage " + text + "\nId " + id);}
+        System.out.println("Contact Name: " + recipient + "\nMessage " + text + "\nId " + id);}
 
     public String getText() {
         return text;

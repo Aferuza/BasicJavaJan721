@@ -1,5 +1,4 @@
 package appContacsMessages;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -7,25 +6,26 @@ public class Main {
     //we write logic for app here
     //define our arrayList , Scanneras field
     //as methods i am going to use are stuatic- i need static fieds also, will initialize contacts inside the main method
-    private static ArrayList<Contacts> contacts;
+    private static ArrayList <Contacts> contactsArrayList;
     private static Scanner scanner;
     private static int id = 0;
 
     public static void main(String[] args) {
         //initialize contacts ArrayList
-        contacts = new ArrayList<>();
-        System.out.println("Welcome to programming world");
+        contactsArrayList = new ArrayList<>();
+        System.out.println("Welcome to programming world!");
         //show t3 options
         showInitOptions();
     }
-
     private static void showInitOptions() {
-        System.out.println("Please select one " +
+        //initialize scanner
+        scanner = new Scanner(System.in);
+        System.out.println("Please enter your name: ");
+       String name = scanner.next();
+                System.out.println(name +","+ "Please select one: " +
                 "\n\t1. Manage Contacts" +
                 "\n\t2. Messages" +
                 "\n\t3. Quit");
-        //initialize scanner
-        scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         switch (choice) {
             case 1:
@@ -45,9 +45,11 @@ public class Main {
                 break;
         }
     }
-
     private static void manageContacts() {
-        System.out.println("Please select one " + "\n\t1. Select all contacts" + "\n\t2. Add a contact" + "\n\t3. Search for a contact");
+        System.out.println("Please select one: " +
+                "\n\t1. Select all contacts" +
+                "\n\t2. Add a contact" +
+                "\n\t3. Search for a contact");
         //we need users input, use scanner, we are not initalizing it here as we have already done that in show initial options method
         int choice = scanner.nextInt();
         switch (choice) {
@@ -70,17 +72,14 @@ public class Main {
                 break;
         }
     }
-
-
     private static void showAllContacts() {
-        //for c inside our"contacs" array list
-        for (Contacts c : contacts) {
-            c.getDetails();
+        //for c inside our"contacts" array list
+        for (Contacts contIterator : contactsArrayList) {
+            contIterator.getDetails();
         }
         showInitOptions();
         System.out.println("************");
     }
-
     private static void deleteContact() {
         System.out.println("Please enter cont name");
         String name = scanner.next();
@@ -90,12 +89,12 @@ public class Main {
         } else {
             boolean doesExist = false;
             //looks in contactsArray list
-            for (Contacts c : contacts) {
+            for (Contacts c : contactsArrayList) {
                 if (c.getName().equals(name)) {
                     //if the name we entered the same we have
                     doesExist = true;
                     //and remove contact from contact list the itaration obj
-                    contacts.remove(c);
+                    contactsArrayList.remove(c);
                 }
             }
             if (!doesExist) {
@@ -104,7 +103,6 @@ public class Main {
         }
         showInitOptions();
     }
-
     private static void searchForContact() {
         System.out.println("Please enter contact's name");
         String name = scanner.next();
@@ -114,7 +112,7 @@ public class Main {
         } else {
             boolean doesExist = false;
             //search for this contact in contacts array list
-            for (Contacts c : contacts) {
+            for (Contacts c : contactsArrayList) {
                 //if cont name is the same name which we just received-
                 if (c.getName().equals(name)) {
                     doesExist = true;
@@ -127,7 +125,6 @@ public class Main {
         }
         showInitOptions();
     }
-
     //will receive user input in this method
     private static void addNewContact() {
         System.out.println("Add a new contact " + "\nPlease enter the contact's name: ");
@@ -146,12 +143,11 @@ public class Main {
             //create new Contact object and pass params
             Contacts singleContact = new Contacts(name, number, email);
             //array list - we add a single contact
-            contacts.add(singleContact);
+            contactsArrayList.add(singleContact);
         }
         showInitOptions(); // we will quit is user tells us
         //System.out.println(name + " added successfully! ");
     }
-
     private static void manageMessages() {
         System.out.println("Please select one: " + "\n\t1. Show all messages" + "\n\t2. Send a new message" +
                 "\n\t3. Go Back");
@@ -168,12 +164,11 @@ public class Main {
                 break;
         }
     }
-
     private static void showAllMessages() {
         //save all of the messages from all the contacts into an Array list
         ArrayList<Message> allMessages = new ArrayList<>();
 // for contac c inside my contacs array list
-        for (Contacts c : contacts) {
+        for (Contacts c : contactsArrayList) {
             //using add  all message - we are adding all of the messages of 1 contact to our AllMessages ArrayLIst
             allMessages.addAll(c.getMessage());
         }
@@ -198,7 +193,7 @@ public class Main {
             sendaNewMessage();
         } else {
             boolean doesExist = false;
-            for (Contacts c : contacts) {
+            for (Contacts c : contactsArrayList) {
                 if (c.getName().equals(name)) {
                     doesExist = true;
                 }
@@ -216,7 +211,7 @@ public class Main {
                     id++;
                     //create out message onject
                     Message newMessageObj = new Message(text, name, id);
-                    for (Contacts c : contacts) {
+                    for (Contacts c : contactsArrayList) {
                         if (c.getName().equals(name)) {
                             //new arraylist
                             ArrayList <Message> newMessages = c.getMessage();
@@ -228,9 +223,9 @@ public class Main {
                             //passing new mess araylist
                             currentContactVar.setMessage(newMessages);
                             //remove c onj from our array list
-                            contacts.remove(c);
+                            contactsArrayList.remove(c);
                             //we added the new Contact and updated DoubleToIntFunction contacts ArrayList
-                            contacts.add(currentContactVar);
+                            contactsArrayList.add(currentContactVar);
                         }
                     }
                 }
