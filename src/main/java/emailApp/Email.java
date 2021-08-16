@@ -1,18 +1,20 @@
 package emailApp;
 
 import java.util.Scanner;
+
 public class Email {
     private String firstName;
     private String lastName;
     private String password;
     private String departm;
     private String email;
-    private String companySuffix = "aeycompany.com";
-    private int getMailBoxCapacity;
+    private String companySuffix = "anycompany.com";
+    private int setMailboxCapacity = 500;
+    private int getMailBoxCapacity = 20;
     private int defaultPasswordLength = 10;
-    private int mailBoxCapacity= 500;;
+    private int mailBoxCapacity = 500;
+    ;
     private String alternateEmail;
-
 
     //constructor to receive first and lastname
     public Email(String firstName, String lastName) {
@@ -28,9 +30,10 @@ public class Email {
         this.password = randomPassword(defaultPasswordLength);
         System.out.println("Your password is  " + this.password);
 
+
         //combine elements to generate email
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + departm + "." + companySuffix;
-        System.out.println("Your email is : " + email);
+        System.out.println("Your email is : " + this.email);
     }
 
     //ask for the department
@@ -51,22 +54,26 @@ public class Email {
         }
     }
 
-    //generate random password
+    //!!!  generate random password
     private String randomPassword(int length) {
-    //not hardcoded, can change lenth any time
         String passwordSet = "ABCDEGHIJKLMNOPQRSTXYZ#$%^&#@><?";
-        char[] password = new char[length];
+        //look at the set as at a collection of characters with length as size
+        char[] passwordAsChar = new char[length];
+        //inside length - grab a value inside the array,
+        // grab a char and pass it into our array one ata atime
         for (int i = 0; i < length; i++) {
-            int rand = (int) (Math.random() * passwordSet.length());
-            password[i] = passwordSet.charAt(rand);
-            System.out.println(rand);
-            System.out.println(passwordSet.charAt(rand));
+            //return int = mutiply 0 or 1 by the size of the passworSet
+            int randomPasw = (int) (Math.random() * passwordSet.length());
+
+            passwordAsChar[i] = passwordSet.charAt(randomPasw);
+            System.out.println(randomPasw);
+            System.out.println(passwordSet.charAt(randomPasw));
             //System.out.println(passwordSet.charAt(rand));
         }
         return new String(password);
     }
 
-       //set mailbox capacity
+    //set mailbox capacity
     public void setMailBoxCapacity(int capacity) {
         this.mailBoxCapacity = capacity;
     }
@@ -77,7 +84,8 @@ public class Email {
 
     }
 //public methods that will access the property
-    //instead of accesing the properties directly, will access them via these public methods(encapsulation /data binding, hiding
+    //instead of accesing the properties directly,
+    // will access them via these public methods(encapsulation /data binding, hiding
 
     //change password
     public void changePassword(String passwordParam) {
@@ -86,20 +94,27 @@ public class Email {
     }
 
     //get mailbox capacity
-    public  int getGetMailBoxCapacity(){ return mailBoxCapacity; }
+    public int getGetMailBoxCapacity() {
+        return mailBoxCapacity;
+    }
+
     //get
-    public String getAlternateEmail(){ return alternateEmail; }
-    public String getPassword(){return password;}
+    public String getAlternateEmail() {
+        return alternateEmail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 
 //method which prints info
 
-    public String showInfo(){
-        return  "Dispay name: " + firstName + " " + lastName +
-                 "Company email: " + companySuffix +
+    public String showInfo() {
+        return "Dispay name: " + firstName + " " + lastName +
+                "Company email: " + companySuffix +
                 "Email " + email +
                 "Mailbox Capacity: " + mailBoxCapacity + "mb";
     }
-
 
 
 }

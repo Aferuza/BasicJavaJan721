@@ -1,12 +1,9 @@
 package Override;
 
-import java.util.SortedMap;
-
 public class Student {
 
    private String name;
     private int age;
-
 
     Student(){
         name = "Lilac";
@@ -18,7 +15,7 @@ public class Student {
     }
 
     public void setName(String name) {
-        this.name = "";
+        this.name = "Feruza Askar";
     }
 
     public int getAge() {
@@ -30,8 +27,14 @@ public class Student {
     }
 
     public void display(){
-        System.out.println("My age is  "+ getAge());
+        System.out.println("My age is  "+ getAge());}
+
+        @Override
+        public String toString(){
+            return "Get full name: " + getName();
+
+        }
     }
 
-}
+
 

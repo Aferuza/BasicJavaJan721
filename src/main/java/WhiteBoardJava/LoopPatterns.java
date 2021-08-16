@@ -1,9 +1,5 @@
 package WhiteBoardJava;
 
-import org.junit.Test;
-
-import java.util.Arrays;
-
 public class LoopPatterns {
 
     public static void main(String[]args){
@@ -64,7 +60,17 @@ public class LoopPatterns {
             case 7:
                 System.out.println("Sunday");
                 break;
-  }}}
+  }
+
+    int row;
+        int column;
+        for (row=1; row <=20; row++){
+            for (column=1; column<=row; column++){
+                System.out.print(column + " ");
+            }
+            System.out.println(" ");
+        }
+    }}
 
 
 

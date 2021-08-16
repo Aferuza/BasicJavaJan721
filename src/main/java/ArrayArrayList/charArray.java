@@ -51,7 +51,7 @@ public class charArray {
         // int to char
         int value_int ='1';
         char value_char= (char)value_int;
-        System.out.println("value_char" + value_char);
+        System.out.println("value_char" + value_char );
 
 // int to char using to string
         int value_int1 = 1;

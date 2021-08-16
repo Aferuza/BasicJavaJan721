@@ -14,7 +14,7 @@ public class ArrayOfObj {
         Person [] person = {p1,p2,p3, p4};
         for(Person i: person){
             //int temp = person[i];
-            System.out.println("Persons are " + person());
+            System.out.println("Persons are " + person);
 
         }
 
