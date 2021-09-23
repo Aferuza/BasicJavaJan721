@@ -1,4 +1,4 @@
-package BankAccountUdemy;
+package ProjectsJava.MessageAppMeisam.emailApp.BankAccountUdemy;
 public abstract class Account implements IBaseRate {
     //List common properties for savings and checking accounts
     private String name;

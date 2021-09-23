@@ -1,4 +1,4 @@
-package BankAccountUdemy;
+package ProjectsJava.MessageAppMeisam.emailApp.BankAccountUdemy;
 
 public interface IBaseRate {
 

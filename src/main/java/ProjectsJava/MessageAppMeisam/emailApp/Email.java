@@ -1,4 +1,4 @@
-package emailApp;
+package ProjectsJava.MessageAppMeisam.emailApp;
 
 import java.util.Scanner;
 

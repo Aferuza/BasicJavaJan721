@@ -1,4 +1,4 @@
-package BankAccountUdemy;
+package ProjectsJava.MessageAppMeisam.emailApp.BankAccountUdemy;
 
 public class Savings extends Account {
     //List common properties for savings abd checking account
