@@ -1,37 +1,42 @@
 package ArrayArrayList;
 
-import org.junit.Assert;
-import org.junit.Test;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
-import static org.junit.Assert.*;
 
-class ArrayClass{
-    public static void main(String[]args){
+import static org.junit.Assert.assertEquals;
+
+class ArrayClass {
+    public static void main(String[] args) {
 
 
         //uninitialized array
         int[] unitializedArray;
 
-    //fixed size array created
-    int [] array = new int[5];
-    int [] inst1to10 = {1,2,3,4,5,6,7,8,9,10};
-    String [] strArray = new String[10];
+        //fixed size array created
+        int[] array = new int[5];
+        int[] inst1to10 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        String[] strArray = new String[10];
+        System.out.println(Arrays.toString(inst1to10));
+        System.out.println(strArray.length);
+        Arrays.sort(inst1to10);
 
-    //declare empty array
-        int [] zeroLength = {};
-        int [] zeroAlso = new int[0];
+        //declare empty array
+        int[] zeroLength = {};
+        int[] zeroAlso = new int[0];
 
-   // create and initialize array
-    int[] intArray = new int[]{2,3,5};
+        // create and initialize array
+        int[] intArray = new int[]{2, 3, 5};
 
         // ragged array
-        int[][] ragged= {{1,2,3,4},{5,6},{7,8}};
+        int[][] ragged = {{1, 2, 3, 4}, {5, 6}, {7, 8}};
 
-    //3 dimentional array
-    int [][][]multi3d = new int[3][5][7] ;
-    int [][] mutiArray = {{1,2,3}, {4,5,6}};
+        //3 dimentional array
+        int[][][] multi3d = new int[3][5][7];
+        int[][] twoDimArray = {{1, 2, 3}, {4, 5, 6}};
+
+
+        //to print multidimentional array - deeptoString
+        System.out.println(Arrays.deepToString(multi3d));
 
 //    The syntax for declaring an array is:
 //    datatype[] arrayName;
@@ -39,28 +44,27 @@ class ArrayClass{
 
 //initialized array
 //    datatype [ ] arrayName = new datatype [size];
-      int [ ] arrayName = new int [5];
+        int[] arrayName = new int[5];
 //multidementional
-    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
-      //Iterate thru array
-      String[] workdays = {"Monday", "Tuesday", "Wednesday"};
-    String days="";
+        int[][] myNumbers = {{1, 2, 3, 4}, {5, 6, 7}};
+        //Iterate thru array
+        String[] workdays = {"Monday", "Tuesday", "Wednesday"};
+        String days = "";
 //    for(String anywday : workdays){
 //        days= days + "|" + anywday;
 //arrays of arrays
-    int [][] multi = new int[4][4] ;
-    int [][] multi1 = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][] multi = new int[4][4];
+        int[][] multi1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         System.out.println("Multi array " + multi1);
 
 //Printing the elements of array
-    int[] array2 = {11,12,13,14,15};
-        for (int i =0;i < 5; i++)
-    {
-        System.out.println(array[i]);
-    }
-        String [] numb012={"zero", "one", "two"};
-        for(String anyNumb:numb012){
-            System.out.println("Print zero "+ anyNumb);
+        int[] array2 = {11, 12, 13, 14, 15};
+        for (int i = 0; i < 5; i++) {
+            System.out.println(array[i]);
+        }
+        String[] numb012 = {"zero", "one", "two"};
+        for (String anyNumb : numb012) {
+            System.out.println("Print zero " + anyNumb);
         }
         assertEquals("zero", numb012[0]);
         assertEquals("two", numb012[1]);
@@ -92,7 +96,7 @@ class ArrayClass{
             System.out.println("Max is " + max);
 
             //sort array
-            String [] companies = {"Google", "Fb", "Sony"};
+            String[] companies = {"Google", "Fb", "Sony"};
             Arrays.sort(companies);
             System.out.println("Sorted " + Arrays.toString(companies));
 
@@ -105,6 +109,6 @@ class ArrayClass{
         }
 
 
-        }
     }
+}
 
