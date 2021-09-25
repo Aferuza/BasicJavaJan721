@@ -52,7 +52,7 @@ class DataTypes {
         System.out.println(point1);
 
 //Strings are refer types
-        String myStr = new String("   Message " + "is printed!!");
+        String myStr = new String(" Message " + "is printed!!");
         System.out.println(myStr);
         //access all String methods
         //check if string ends with a char or sequence of chars and it returns true or false
@@ -84,7 +84,18 @@ class DataTypes {
         String windows2 = "c:\tWindows\\...";
         System.out.println(windows1);
 
+
+        //boolean true/false is retuned
+        int x = 1;
+        int y = 1;
+        System.out.println(x == y);
+        System.out.println(x != y);
+        System.out.println(x <= y);
+
+
     }
+
+
 }
 
 
