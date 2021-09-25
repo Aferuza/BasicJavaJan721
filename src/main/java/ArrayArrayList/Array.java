@@ -4,13 +4,11 @@ import java.util.Arrays;
 import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
-
 class ArrayClass {
     public static void main(String[] args) {
-
-
         //uninitialized array
         int[] unitializedArray;
+        unitializedArray = new int[]{100, 200};
 
         //fixed size array created
         int[] array = new int[5];
@@ -23,6 +21,9 @@ class ArrayClass {
         //declare empty array
         int[] zeroLength = {};
         int[] zeroAlso = new int[0];
+
+        int[] tenObjArray = new int[10];
+
 
         // create and initialize array
         int[] intArray = new int[]{2, 3, 5};
@@ -47,9 +48,10 @@ class ArrayClass {
         int[] arrayName = new int[5];
 //multidementional
         int[][] myNumbers = {{1, 2, 3, 4}, {5, 6, 7}};
+
         //Iterate thru array
         String[] workdays = {"Monday", "Tuesday", "Wednesday"};
-        String days = "";
+        java.lang.String days = "";
 //    for(String anywday : workdays){
 //        days= days + "|" + anywday;
 //arrays of arrays
@@ -69,7 +71,6 @@ class ArrayClass {
         assertEquals("zero", numb012[0]);
         assertEquals("two", numb012[1]);
     }
-
 
     public static class TestArray {
 
@@ -96,7 +97,7 @@ class ArrayClass {
             System.out.println("Max is " + max);
 
             //sort array
-            String[] companies = {"Google", "Fb", "Sony"};
+            java.lang.String[] companies = {"Google", "Fb", "Sony"};
             Arrays.sort(companies);
             System.out.println("Sorted " + Arrays.toString(companies));
 
@@ -104,11 +105,57 @@ class ArrayClass {
             Arrays.sort(companies, Collections.reverseOrder());
             System.out.println("Reverse sort" + Arrays.toString(companies));
 
-            //
+            java.lang.String days = "";
+            java.lang.String[] workdays = {"Mon", "Tue", "Wed", "Thr", "Fri", "Sat"};
+
+            //for each loop
+            for (java.lang.String wordDayIterator : workdays) {
+                days = days + "|" + workdays[Integer.parseInt(wordDayIterator)];
+                System.out.println("Workdays are " + days);
+            }
+            //array of 3 users
+          String user = "";
+            String[] users = new String[3];
+            for (String userIterator : users) {
+                user = user + userIterator;
+            }
+            //another loop version- initializing the var outside the loop
+            //initilize statement is empty
+            int i= 0;
+            for (; i<5; i++){
+                days = days +"|" + workdays[i];
+                i ++;
+                System.out.println("Workdays are "+ workdays[i]);
+                assertEquals("Mon|Tue|Wed|Thr", days);
+            }
+
+            //increment dayIndex
+            int dayIndex = 0;
+            for (String workIter: workdays){
+                days = days+ "|" +workIter;
+                System.out.println("found " + workIter  + " at position " + dayIndex);
+                dayIndex++;
+            }
+// array methods
+            String [] weekD;
+            weekD = Arrays.copyOf(workdays, 7);
+            assertEquals(null, workdays[5]);
+            weekD = Arrays.copyOf( weekD, 3);
+            assertEquals(3, weekD.length);
+            assertEquals("Mon", weekD[5]);
+
+            weekD = Arrays.copyOfRange(workdays, 2, 5);
+            assertEquals(3, weekD.length);
+            int [] minOne = new int[20];
+            for (String string : weekD = Arrays.fill(minOne, -1)) {
+
+            }
+            int [] sortedAr= {2,22,56,14};
+            Arrays.sort(sortedAr);
+            assertEquals(2, sortedAr[2]);
+
 
         }
-
-
     }
 }
 

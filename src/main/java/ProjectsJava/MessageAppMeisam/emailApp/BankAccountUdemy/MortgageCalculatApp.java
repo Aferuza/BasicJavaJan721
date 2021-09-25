@@ -14,7 +14,7 @@ public class MortgageCalculatApp {
         System.out.println("Principal ");
         int principal = scanner.nextInt();
 
-        System.out.println("Annual INterest Rate: ");
+        System.out.println("Annual Interest Rate: ");
         float annuallIntRate = scanner.nextFloat();
         float monthlyInterest = annuallIntRate/PERCENT/MONTHS_IN_YEAR;
 
